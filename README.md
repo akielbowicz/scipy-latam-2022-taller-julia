@@ -29,6 +29,8 @@ Y, si queda tiempo... y a votación
 
 ### 
 
+- [Prerequisitos](./materiales_taller/README.md)
+
 - Julia es [practicidad](./materiales_taller/julia_es_practicidad/)
 - Julia es [diversión](./materiales_taller/julia_es_diversion/)
 - Julia es [técnica](./materiales_taller/julia_es_tecnica/)

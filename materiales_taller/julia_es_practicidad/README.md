@@ -31,6 +31,11 @@ Conda.pip("install", "webio_jupyter_extension")
 
 Alternativamente
 
+```shell
+> conda activate "PATH de conda"
+> jupyter labextension install jupyterlab-plotly
+```
+
 ```julia-repl
 julia> notebook(dir=".")
 ```

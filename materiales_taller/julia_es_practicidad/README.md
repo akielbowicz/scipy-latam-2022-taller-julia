@@ -40,7 +40,6 @@ Alternativamente
 julia> notebook(dir=".")
 ```
 
-
 ## Materiales adicionales
 
 - Lista de diferencias especificas con otros lenguajes como Python, Matlab, R ... [Noteworthy differences](https://docs.julialang.org/en/v2/manual/noteworthy-differences/)

@@ -1,5 +1,7 @@
 # Julia es diversión
 
+![julia_dot_purple_right](../../artefactos/imagenes/julia-dots_purple_right.svg)
+
 ```shell
 cd materiales_taller/julia_es_diversion
 julia --project="."

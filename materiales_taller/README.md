@@ -1,4 +1,6 @@
-# Pre requisitos
+# Actividades del taller
+
+## Pre requisitos
 
 - **Instalar Julia**
 
@@ -32,3 +34,9 @@ O usando [Scoop](https://scoop.sh/)
 ```
 
 Para Vim existe el paquete de [julia-vim](https://github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md)
+
+## Actividades
+
+- Julia es [practicidad](./materiales_taller/julia_es_practicidad/)
+- Julia es [diversión](./materiales_taller/julia_es_diversion/)
+- Julia es [técnica](./materiales_taller/julia_es_tecnica/)

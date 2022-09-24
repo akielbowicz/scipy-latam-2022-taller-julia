@@ -2,7 +2,6 @@
 
 Este repositorio lo podés encontar online en [github](https://github.com/akielbowicz/scipy-latam-2022-taller-julia)
 
-
 El taller es parte de las actividades de [SciPy Latam 2022](https://pythoncientifico.ar/)
 
 ## Descripción

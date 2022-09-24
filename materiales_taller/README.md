@@ -37,6 +37,6 @@ Para Vim existe el paquete de [julia-vim](https://github.com/JuliaEditorSupport/
 
 ## Actividades
 
-- Julia es [practicidad](./materiales_taller/julia_es_practicidad/)
-- Julia es [diversión](./materiales_taller/julia_es_diversion/)
-- Julia es [técnica](./materiales_taller/julia_es_tecnica/)
+- Julia es [practicidad](./julia_es_practicidad/README.md)
+- Julia es [diversión](./julia_es_diversion/README.md)
+- Julia es [técnica](./julia_es_tecnica/README.md)

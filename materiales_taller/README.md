@@ -46,4 +46,4 @@ Para Vim existe el paquete de [julia-vim](https://github.com/JuliaEditorSupport/
 - Julia para [performance](./julia_para_vos/README.md#julia-para-performance)
 - Julia para [Ecuaciones Diferenciales](./julia_para_vos/README.md#julia-para-ecuaciones-diferenciales)
 - Julia para [Aprendizaje Automático](./julia_para_vos/README.md#julia-para-aprendizaje-automático)
-- Julia para [Graficar](./julia_para_vos/README.md#julia-para-graficar)
+- Julia para [Graficar](./julia_para_vos/README.md#julia-para-graficos)

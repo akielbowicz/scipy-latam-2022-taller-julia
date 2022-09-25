@@ -2,10 +2,10 @@
 
 ![julia-dots](../../artefactos/imagenes/julia-dots.svg)
 
-## julia para performance
+## julia para Performance
 
 ## julia para Ecuaciones Diferenciales
 
 ## julia para Aprendizaje Automático
 
-## julia para Graficar
+## julia para Graficos

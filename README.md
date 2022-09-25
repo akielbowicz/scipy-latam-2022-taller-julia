@@ -2,9 +2,9 @@
 
 Este repositorio lo podés encontar online en [github](https://github.com/akielbowicz/scipy-latam-2022-taller-julia)
 
-[SciPy Latam 2022](https://pythoncientifico.ar/)
+El taller es parte de las actividades de [SciPy Latam 2022](https://pythoncientifico.ar/)
 
-###
+## Descripción
 
 Sabías que Jupyter es un acrónimo de [Ju]lia, [Pyt]hon 🐍 y eeee[R] 🏴‍☠️?
 Ahora que tengo tu atención, te invito a conocer el lenguaje de Julia.
@@ -26,11 +26,4 @@ Y, si queda tiempo... y a votación
 - Armado de Paquetes, Testing, CI/CD
 - Soluciones de Ecuaciones Diferenciales y el mundo de Scientific Machine Learning
 
-
-### 
-
-- [Prerequisitos](./materiales_taller/README.md)
-
-- Julia es [practicidad](./materiales_taller/julia_es_practicidad/)
-- Julia es [diversión](./materiales_taller/julia_es_diversion/)
-- Julia es [técnica](./materiales_taller/julia_es_tecnica/)
+### [Actividades del taller](./materiales_taller/README.md)

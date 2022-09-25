@@ -54,18 +54,14 @@ Ya en `jupyter`, abran el cuaderno `julia_es_practicidad.ipynb`
 
 ## Uso de Librerias
 
-- Plots
-- DataFrames
-- CSV
+- [Plots](https://docs.juliaplots.org/latest/)
+- [StatsPlots](https://docs.juliaplots.org/latest/generated/statsplots/#StatsPlots)
+- [DataFrames](https://dataframes.juliadata.org/stable/man/getting_started/)
+- [CSV](https://csv.juliadata.org/stable/)
 
 ```julia-repl
 import Pkg
 pkg"add Plots, DataFrames"
-```
-
-```julia-repl
-import Pkg
-pkg"add CSV"
 ```
 
 ### Uso de [PlotlyJS.jl](https://juliaplots.org/PlotlyJS.jl/stable/) para gráficos interactivos

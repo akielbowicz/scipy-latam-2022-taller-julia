@@ -17,7 +17,7 @@ julia> ]
 ```
 
 ```julia-repl
-;
+julia>;
 shell> cd SciPyLatam
 shell> ls -a
 ```
@@ -25,7 +25,7 @@ shell> ls -a
 ### Agregar tests
 
 ```julia-repl
-;
+julia>;
 shell> mkdir test
 shell> touch test/runtests.jl
 ```
@@ -47,7 +47,7 @@ pkg> add ../julia_es_tecnica/SciPyLatam
 ```
 
 ```julia-repl
-;
+julia>;
 shell> git init
 ```
 

@@ -5,29 +5,29 @@
 ## Guia
 
 ```shell
-> cd materiales_taller/julia_es_tecnica
-> julia
+>cd materiales_taller/julia_es_tecnica
+>julia
 ```
 
 ### Crear un nuevo paquete
 
 ```julia-repl
-julia> ]
-(@v1.7) pkg> generate SciPyLatam
+julia>]
+(@v1.7) pkg>generate SciPyLatam
 ```
 
 ```julia-repl
 julia>;
-shell> cd SciPyLatam
-shell> ls -a
+shell>cd SciPyLatam
+shell>ls -a
 ```
 
 ### Agregar tests
 
 ```julia-repl
 julia>;
-shell> mkdir test
-shell> touch test/runtests.jl
+shell>mkdir test
+shell>touch test/runtests.jl
 ```
 
 ```julia
@@ -42,13 +42,13 @@ end
 ### Importar desde otro projecto
 
 ```julia-repl
-julia> ]
-pkg> add ../julia_es_tecnica/SciPyLatam
+julia>]
+pkg>add ../julia_es_tecnica/SciPyLatam
 ```
 
 ```julia-repl
 julia>;
-shell> git init
+shell>git init
 ```
 
 ## Materiales adicionales

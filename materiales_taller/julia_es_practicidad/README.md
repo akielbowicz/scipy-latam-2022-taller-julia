@@ -52,7 +52,13 @@ julia> notebook(dir=".")
 
 Ya en `jupyter`, abran el cuaderno `julia_es_practicidad.ipynb`
 
+## Tipos y Multiple Dispatch
+
+En este paso vamos a trabajar en el notebook de [tipos_y_multiple_dispatch](tipos_y_multiple_dispatch.ipynb)
+
 ## Uso de Librerias
+
+En este paso vamos a trabajar en el notebook de [uso_de_librerias](uso_de_librerias.ipynb)
 
 - [Plots](https://docs.juliaplots.org/latest/)
 - [StatsPlots](https://docs.juliaplots.org/latest/generated/statsplots/#StatsPlots)

@@ -12,6 +12,18 @@ julia> using Pluto
 julia> Pluto.run()
 ```
 
+## Uso de PlutoUI
+
+[PlutoUI](https://github.com/JuliaPluto/PlutoUI.jl)
+
+```julia
+using PlutoUI
+```
+
+```julia
+@bind x Slider(1,2,10)
+```
+
 ## Agregar paquetes locales
 
 ```julia

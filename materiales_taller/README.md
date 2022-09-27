@@ -1,4 +1,6 @@
-# Pre requisitos
+# Actividades del taller
+
+## Pre requisitos
 
 - **Instalar Julia**
 
@@ -32,3 +34,19 @@ O usando [Scoop](https://scoop.sh/)
 ```
 
 Para Vim existe el paquete de [julia-vim](https://github.com/JuliaEditorSupport/julia-vim/blob/master/INSTALL.md)
+
+## Actividades
+
+- Julia es [practicidad](./julia_es_practicidad/README.md)
+- Julia es [diversión](./julia_es_diversion/README.md)
+- Julia es [técnica](./julia_es_tecnica/README.md)
+
+## Actividad final
+
+- [Performance](./julia_para_vos/README.md#performance)
+- [Ecuaciones Diferenciales](./julia_para_vos/README.md#ecuaciones-diferenciales)
+- [Aprendizaje Automático](./julia_para_vos/README.md#aprendizaje-automático)
+- [Gráficos y visualizaciones](./julia_para_vos/README.md#gráficos-y-visualizaciones)
+- [Paquetes y librerías](./julia_para_vos/README.md#paquetes-y-librerías)
+- [Programación Paralela y Distribuida](./julia_para_vos/README.md#programación-paralela-y-distribuida)
+- [Metaprogramación](./julia_para_vos/README.md#metaprogramación)

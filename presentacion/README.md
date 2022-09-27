@@ -1,8 +1,10 @@
-#
+# Taller de Julia para Pythonistas
 
+![julia-logo](../artefactos/imagenes/julia-logo-color.svg)
 
+[JuliaHub](https://juliahub.com/ui/Packages)
 
-# Materiales adicionales
+## Materiales adicionales
 
 ### Redes
 
@@ -22,7 +24,11 @@
 - [Hands-On Design Patterns and Best Practices with Julia](https://www.packtpub.com/product/hands-on-design-patterns-and-best-practices-with-julia/9781838648817)
 - [Julia High Performance](https://www.packtpub.com/product/julia-1-0-high-performance/9781788298117)
 - [Data Science in Julia for Hackers](https://datasciencejuliahackers.com/) (digital y libre)
+
+### Cursos
+
 - Curso [MIT Computational Thinking](https://computationalthinking.mit.edu/Spring21/)
+- Curso [Parallel Computing and Scientific Machine Learning (SciML): Methods and Applications](https://book.sciml.ai/)
 
 ### Videos
 

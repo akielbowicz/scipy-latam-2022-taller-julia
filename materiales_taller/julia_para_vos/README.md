@@ -58,34 +58,36 @@ solucion
 
 ## Gráficos y visualizaciones
 
-[RecipesBase.jl](https://github.com/JuliaPlots/RecipesBase.jl)
+En esta actividad pueden:
 
-[UnicodePlots.jl](https://github.com/JuliaPlots/UnicodePlots.jl)
-[VegaLite.jl](https://github.com/queryverse/VegaLite.jl)
+1. Definir una receta de plotting para graficar un tipo de dato propio con [RecipesBase.jl](https://github.com/JuliaPlots/RecipesBase.jl)
 
-[Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl)
+2. Explorar [UnicodePlots.jl](https://github.com/JuliaPlots/UnicodePlots.jl) para tener gráficos en la consola
+o explorar [VegaLite.jl](https://github.com/queryverse/VegaLite.jl) para realizar plots interactivos.
+
+3. Jugar haciendo imágenes con [Luxor.jl](https://github.com/JuliaGraphics/Luxor.jl) o animaciones con
 [Javis.jl](https://github.com/JuliaAnimators/Javis.jl)
 
 ## Paquetes y librerías
 
-[PkgTemplates.jl](https://github.com/invenia/PkgTemplates.jl)
-
-## Programación Paralela y Distribuida
-
-[Parallel Computing](https://docs.julialang.org/en/v1/manual/parallel-computing/)
-
-[CUDA.jl](https://github.com/JuliaGPU/CUDA.jl)
-[GPUArrays.jl](https://github.com/JuliaGPU/GPUArrays.jl)
-
-[Distributed](https://docs.julialang.org/en/v1/stdlib/Distributed/)
-[DistributedArrays.jl](https://github.com/JuliaParallel/DistributedArrays.jl)
-
-## Metaprogramación
-
-[Metaprogramación](https://docs.julialang.org/en/v1/manual/metaprogramming/)
-[MacroTools](https://github.com/FluxML/MacroTools.jl)
-[Cthulhu.jl](https://github.com/JuliaDebug/Cthulhu.jl)
+En esta actividad pueden explorar la creación de un paquete usando un template con [PkgTemplates.jl](https://github.com/invenia/PkgTemplates.jl) que agrega las cosas necesarias de CI/CD, coverage, ...
 
 ## Interoperabilidad con Python
 
 [PyCall.jl](https://github.com/JuliaPy/PyCall.jl)
+
+## Programación Paralela y Distribuida
+
+Esta actividad es para explorar las capacidades de Programación Paralela y distribuida
+[Parallel Computing](https://docs.julialang.org/en/v1/manual/parallel-computing/)
+usando [Distributed](https://docs.julialang.org/en/v1/stdlib/Distributed/) y [DistributedArrays.jl](https://github.com/JuliaParallel/DistributedArrays.jl)
+
+Y si tienen GPU probar [CUDA.jl](https://github.com/JuliaGPU/CUDA.jl) y [GPUArrays.jl](https://github.com/JuliaGPU/GPUArrays.jl)
+
+## Metaprogramación
+
+Si se sienten aventureros y les interesa aprender a generar código que genera código pueden explorar
+las capacidades de [Metaprogramación](https://docs.julialang.org/en/v1/manual/metaprogramming/) que tiene julia.
+Adicionalmente están las librerías [MacroTools](https://github.com/FluxML/MacroTools.jl) con herramientas
+predefinidas y [Cthulhu.jl](https://github.com/JuliaDebug/Cthulhu.jl) que ayuda a explorar el código generado
+y facilita la búsqueda de errores.

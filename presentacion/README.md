@@ -6,12 +6,12 @@ logoImg: "https://pythoncientifico.ar/static/assets/images/scipy-la-2022_logo-he
 slideNumber: false
 title: "Julia para Pythonistas"
 ---
-
 # Taller de Julia ✨ para Pythonistas 🐍
 
 SciPy Latam 2022, Salta, Argentina.
 
 Miercoles 28 de Septiembre, 2022
+
 ---
 
 > ¿Qué viene antes de Julia?

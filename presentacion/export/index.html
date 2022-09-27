@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Julia para Pythonistas</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/solarized.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+    <div id="logo" style="position: fixed; top: 20px; left: 20px; z-index: 1; height:3rem;">
+        <img src="https://pythoncientifico.ar/static/assets/images/scipy-la-2022_logo-header.svg" style="height:100%"/>
+    </div>
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section >
+            
+            <h1>Taller de Julia ✨ para Pythonistas 🐍</h1>
+<p>SciPy Latam 2022, Salta, Argentina.</p>
+<p>Miercoles 28 de Septiembre, 2022</p>
+
+            </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <blockquote>
+<p>¿Qué viene antes de Julia?</p>
+</blockquote>
+<p><span class="fragment">&gt; Augusto </span>
+<span class="fragment"><strong>Sasha</strong> </span>
+<span class="fragment">Kielbowicz</span></p>
+
+            </section>
+        
+            <section >
+                <blockquote>
+<p>Augusto <strong>Sasha</strong> Kielbowicz</p>
+</blockquote>
+<p>Originario de</p>
+<p><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/joypixels/340/flag-ecuador_1f1ea-1f1e8.png" alt="🇪🇨 :ecuador:"></p>
+
+            </section>
+        
+            <section >
+                <blockquote>
+<p>Augusto <strong>Sasha</strong> Kielbowicz</p>
+</blockquote>
+<p>Criado en Quito y Catamarca</p>
+<p><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/joypixels/340/flag-ecuador_1f1ea-1f1e8.png" alt="🇪🇨 :ecuador:">
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/joypixels/340/flag-argentina_1f1e6-1f1f7.png" alt="🇦🇷 :argentina:"></p>
+
+            </section>
+        
+            <section >
+                <blockquote>
+<p>Augusto <strong>Sasha</strong> Kielbowicz</p>
+</blockquote>
+<ul>
+<li class="fragment">Estudié Física en la UBA 👨‍🔬⚛️</li>
+<li class="fragment">Programador autodidacta 🐍 🧮 📚</li>
+<li class="fragment">Trabajo como <code>Quantitative Developer</code> 👨‍💻 📈📉💸</li>
+</ul>
+<p class="fragment fade-in-then-out"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Qontigo-v1_subs_block_rgb.png/320px-Qontigo-v1_subs_block_rgb.png" alt="logo-qontigo"></p>
+<p class="fragment fade-in">🤓</p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="data:image/gif;base64,R0lGODlhlACUAJEAAAAAAP///wAAAAAAACH5BAEAAAIALAAAAACUAJQAAAL/jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTFPAjef6zjO5z/sdhIZgEEFMGJdGG/OZROKAS+nNCsVSoU8nt7uIDpnaMbes+GYnanB6GiabAVh3QFxsV9lwC76RpAZxxHd18beFgRhnmHf2QCix6DCp1FdRiXb3NdhTSHd42dmIKQp5KXi64wXqZ0qJKufYukkaaUk6Sps5V+c5y+q72ks8+8cLXBwRKFtLqyuso8k8/JaruvsKGLuXLMndpEwtzfiMrQk9d4vsHD2OHmoLzjG+rp2o/tuurDjPH5+t275v8gS+23DQW4Z6+tgxrDYwYr+CAc25omjvGiyM/w3BJZRYzh0ncc0ceuzIkSI8axX1qMwH0WRKcgozVkxnzOW0kvdCwqQZ0eZKXC11kjTYk+XEojFRAmW3U+OypESXipwZbShOkAQtbpO61Y7Nj8H+dS17kelTp2Q/aT33yeXalzX91aUbVK4+XXrt5sX7MfDJvqz6AvYr+LBiw2DLMY5682jku5OdPZ5xa6jMuUBrfMhslutXzlA9T4WomWrWn6ZDgFb4luVDryxm24GMWzI9oxpsN8tNGfhC3sNn3taNPDhC4lZ/HlcO/S/tuCNFzL6q9tjgcLBZe++ednXOpgIhi9U21m/z8dm3azfudMv10Ggtu78v1Td5r+nxFv9muxd1esQmmnmqYdNfZwK2QWAl8/XGU3kLpgJeVXCxtxtSEnYlV4NUPViKhtPJFl9o7/EXIHvPjSbUhIihB2N+Kdr3CIcl2rhfajLuqKCKvyF442ncSYePUo7FyOBn1XVw4mYGonYChUwi6aRkr5UgZYYoQrlRZSuSkOVyPFZJ2ZVL6VdZkaKhiZ2ZRzZGInz++VQhm8792OVmdlYo3JOkLcnXgRjeOaeRdeLX3oYsCmqhj4q2NWh4b/7JZYiJDtnnd5bKB2Cl9XVI55ozboVdqWJeeiWkNI44Gqf7udmljl4CSt+kgcrJalhI+pkqo7CuaiqEhRJJaI8F2gokrlr/ysrrjHp+2Kmx662aoKpqNhkhprXGWuyexxoqao3U7gpQm4gSmKmjlBpbWpnZtniWiUuu+Cyc4UrrorjYYrUtUQ5SyairSR76qnrJsrpvrgdLmbB43/oL7ZgBT8owwPzyeaGQDl/GbZ7bOTytrgUPmLHAG4/qVsqRjiuumiZr+iupGVdLK7gvrxwzQA0Xmy7LCsc58JSV0ryYwO36/KXOFl/ac9Iek+xBryNzJmvOQIf59M8+3zqktciqC4LVWy8cZL1MK+kpxRGvER3XwQqN79VrnzfszWNHvbTZ/xIG89royquo0XMTB2+r/VaNstz2cgxsv17bzHO+CBt28uIG/3e8qdKBhypz1iGrbKnTjWq84OfxpiX63xgDbTrpqONp+OlCHp3YlnFLVzjIfbcMuqq/ersz691OHF3wsd99r/FYu06s8JjTbbvyNTMPPZmL2msu1I3LXr2vg2M/vPZiA5/46HZzzfj452raOcTgqwvqyjDsPTnvzh+fepR+k522/KHmbwL6oa98v1ufDATIv9sVUFmSWx5jKia+F/XvenoR3APXBT0/nYlyarsgmgoHov/wTXEexBUIP1auFLbtfxIMmgW1hblPXW50tVte9m6nOhrOUDgfJCBzSta7HSYHd9O7ofUyaKUgNQ1R3XsfEXOURCiC60RGjJYMRdSsYdD5jonv8h4Di5eta5ELfl10IvlM6MXocZFH55tZGMOnNenZL3lpfFsPzbi0G7qMfW7EIhzrUzm2mY+Pz3vj6pBWRMdZ8VR2FCIZ5+ihqS0rciskoQ0VKUlGUrJ5FIzf8ewmtj3KjocodNcExehEUTKPlBd7Ig5ZmErOgY6Vasmi1noGyFkOEUTeuuItOxi0BXYtjUiMYQPn5UM/4miYlovlIwUpzNwl8HEPeyEEFWjI2WVTla3ppje/Cc5winOc5CynOc+JznSqc53sbKc7Q1AAADs=" alt="qr"></p>
+<p><a href="https://github.com/akielbowicz/scipy-latam-2022-taller-julia/tree/main">https://github.com/akielbowicz/scipy-latam-2022-taller-julia/</a></p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+        <section >
+            
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>We want a language that’s open source, with a liberal license.</p>
+</blockquote>
+
+            </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Queremos un lenguaje que sea de <code>codigo abierto</code>,
+con una licencia liberal.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>We want the speed of C with the dynamism of Ruby.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Queremos la velocidad de <code>C</code> con el dinamismo
+de <code>Ruby</code>.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>We want a language that’s homoiconic, with true macros like Lisp, but with obvious, familiar mathematical notation like Matlab.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Queremos un lenguaje que sea <code>homoiconico</code>,</p>
+</blockquote>
+
+            </section>
+        
+            <section data-background="https://media2.giphy.com/media/WGvwSV5qjBJuYPbzcT/giphy.gif?cid=ecf05e47fvlsllqsek3m6y4tuohs5uv5oonqc38nuztgrvl0&rid=giphy.gif&ct=g">
+                <!-- .slide: data-background="https://media2.giphy.com/media/WGvwSV5qjBJuYPbzcT/giphy.gif?cid=ecf05e47fvlsllqsek3m6y4tuohs5uv5oonqc38nuztgrvl0&rid=giphy.gif&ct=g" -->
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Queremos un lenguaje que sea <code>homoiconico</code>,
+<span class="fragment">con <em>macros</em> verdaderos como <code>Lisp</code>,</span>
+<span class="fragment">pero con la familiar notacion matematatica como
+<code>Matlab</code></span></p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>We want something as usable for general programming as Python, as easy for statistics as R, as natural for string processing as Perl, as powerful for linear algebra as Matlab, as good at gluing programs together as the shell.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Queremos que sea utilizable para programacion
+general como
+<span class="fragment"><code>Python</code>,</span>
+<span class="fragment">tan facil para la estadistica como </span>
+<span class="fragment"><code>R</code>,</span>
+<span class="fragment">tan natural para procesamiento de texto como </span>
+<span class="fragment"><code>Perl</code>,</span>
+<span class="fragment">tan poderoso para <em>algebra lineal</em> como </span>
+<span class="fragment"><code>Matlab</code>,</span>
+<span class="fragment">tan bueno en unir programas como la </span>
+<span class="fragment"><code>shell</code>.</span></p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Something that is dirt simple to learn, yet keeps the most serious hackers happy.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Algo que sea muy simple para aprender,
+pero que deje feliz a los <em>hackers</em> mas solemnes</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>We want it interactive and we want it compiled.</p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<blockquote>
+<p>Lo queremos <strong>interactivo</strong>
+<span class="fragment"> y lo queremos <strong>compilado</strong>.</span></p>
+</blockquote>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/320px-Julia_Programming_Language_Logo.svg.png" alt="julia-logo"></p>
+<p><a href="https://julialang.org/blog/2012/02/why-we-created-julia/">Why we created julia</a></p>
+
+            </section>
+        
+            <section >
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/267px-Matlab_Logo.png" alt="matlab-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/SCIPY_2.svg/240px-SCIPY_2.svg.png" alt="scipy-logo"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mathematica_Logo.svg/230px-Mathematica_Logo.svg.png" alt="wolfram-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gnu-octave-logo.svg/240px-Gnu-octave-logo.svg.png" alt="octave-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/310px-R_logo.svg.png" alt="r-logo"></p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+        <section data-background="https://media4.giphy.com/media/PI3QGKFN6XZUCMMqJm/giphy.gif?cid=ecf05e47cj84xy2o9r8p2ve9k1y9m7cen7wnz0r7dwset9ns&rid=giphy.gif&ct=g">
+            
+            <h2><strong>Hora de Codear</strong></h2>
+<!-- .slide: data-background="https://media4.giphy.com/media/PI3QGKFN6XZUCMMqJm/giphy.gif?cid=ecf05e47cj84xy2o9r8p2ve9k1y9m7cen7wnz0r7dwset9ns&rid=giphy.gif&ct=g" -->
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Paquetes</h2>
+<p><a href="https://juliahub.com/ui/Packages">JuliaHub</a></p>
+
+            </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <h2>Materiales adicionales</h2>
+
+            </section>
+        
+            <section >
+                <h3>Redes</h3>
+<ul>
+<li><a href="https://t.me/julialangarg">JuliaLang Argentina</a> Telegram</li>
+<li><a href="https://discourse.julialang.org/">Discourse</a></li>
+<li><a href="https://julialang.zulipchat.com/">Zulip</a></li>
+<li><a href="https://julialang.slack.com/">Slack</a></li>
+<li><a href="https://discord.com/invite/nPPZy4RYbP">Humas of Julia</a> Discord</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h3>Foros</h3>
+<ul>
+<li><a href="https://forem.julialang.org/">Forem</a></li>
+<li><a href="https://www.juliabloggers.com/">Julia Bloggers</a> (agregador de posts)</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h3>Libros</h3>
+<ul>
+<li><a href="https://www.packtpub.com/product/hands-on-design-patterns-and-best-practices-with-julia/9781838648817">Hands-On Design Patterns and Best Practices with Julia</a></li>
+<li><a href="https://www.packtpub.com/product/julia-1-0-high-performance/9781788298117">Julia High Performance</a></li>
+<li><a href="https://datasciencejuliahackers.com/">Data Science in Julia for Hackers</a> (digital y libre)</li>
+<li><a href="https://www.oreilly.com/library/view/think-julia/9781492045021/">Think Julia</a></li>
+<li><a href="https://julialang.org/learning/books/">Muuuchos libros más…</a></li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h3>Cursos</h3>
+<ul>
+<li>Curso <a href="https://computationalthinking.mit.edu/Spring21/">MIT Computational Thinking</a></li>
+<li>Curso <a href="https://book.sciml.ai/">Parallel Computing and Scientific Machine Learning (SciML): Methods and Applications</a></li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h3>Videos</h3>
+<ul>
+<li>El canal de YouTube <a href="https://www.youtube.com/c/TheJuliaLanguage">The Julia Programming Language</a></li>
+<li>El canal de <a href="https://www.youtube.com/c/juliafortalentedamateurs/playlists">doggo dot jl</a> (julia for talented amateurs)</li>
+</ul>
+
+            </section>
+        
+
+    </section>
+    
+
+
+    </div>
+
+
+  </div>
+
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
+      }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
+
+
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
+
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
+
+        //     const message = event.data; // The JSON data our extension sent
+
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
+
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
+</html>

@@ -49,4 +49,5 @@ Para Vim existe el paquete de [julia-vim](https://github.com/JuliaEditorSupport/
 - [Gráficos y visualizaciones](./julia_para_vos/README.md#gráficos-y-visualizaciones)
 - [Paquetes y librerías](./julia_para_vos/README.md#paquetes-y-librerías)
 - [Programación Paralela y Distribuida](./julia_para_vos/README.md#programación-paralela-y-distribuida)
+- [Interoperabilidad con Python](./julia_para_vos/README.md#interoperabilidad-con-python)
 - [Metaprogramación](./julia_para_vos/README.md#metaprogramación)
